@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Items from an Array with pop() and shift()</title>
+</head>
+
+<body>
+    <h1>Remove Items from an Array with pop() and shift()</h1>
+    <p>instead of adding, pop() removes an element from the end of an array, while shift() removes an element from the
+        beginning. The key difference between pop() and shift() and their cousins push() and unshift(), is that neither
+        method takes parameters, and each only allows an array to be modified by a single element at a time.</p>
+
+    <script>
+        function popShift(arr) {
+            let popped = arr.pop(); // Change this line
+            let shifted = arr.shift(); // Change this line
+            return [shifted, popped];
+        }
+
+        console.log(popShift(['challenge', 'is', 'not', 'complete']));
+    </script>
+</body>
+
+</html>
