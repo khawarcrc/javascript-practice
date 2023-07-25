@@ -17,26 +17,27 @@
         deleting elements (3), the number of elements to be deleted (1), and the remaining arguments (13, 14) will be
         inserted starting at that same index. Note that there can be any number of elements (separated by commas)
         following amountToDelete, each of which gets inserted.</p>
+        <script>
+            // exampale # 1
+            const numbers = [10, 11, 12, 12, 15];
+            const startIndex = 3;
+            const amountToDelete = 1;
+        
+            numbers.splice(startIndex, amountToDelete, 13, 14);
+            console.log(numbers);
+        
+            // exampale # 2  
+            function htmlColorNames(arr) {
+                // Only change code below this line
+                arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
+                // Only change code above this line
+                return arr;
+            }
+        
+            console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+        
+        </script>
 </body>
-<script>
-    // exampale # 1
-    const numbers = [10, 11, 12, 12, 15];
-    const startIndex = 3;
-    const amountToDelete = 1;
 
-    numbers.splice(startIndex, amountToDelete, 13, 14);
-    console.log(numbers);
-
-    // exampale # 2  
-    function htmlColorNames(arr) {
-        // Only change code below this line
-        arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
-        // Only change code above this line
-        return arr;
-    }
-
-    console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
-
-</script>
 
 </html>
