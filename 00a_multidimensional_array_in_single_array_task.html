@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let newArr = [1, 2, [4, 5, [6, 7]], [3, 2], [9]];
+        let result = singleSortedArr(newArr);
+        function singleSortedArr(arr) {
+            const singleArr = [];
+
+            function loopTheArrayInSingleArr(arr) {
+                for (let i = 0; i < arr.length; i++) {
+                    if (Array.isArray(arr[i])) {
+                        loopTheArrayInSingleArr(arr[i]);
+                    } else {
+                        singleArr.push(arr[i]);
+                    }
+                }
+            }
+
+            loopTheArrayInSingleArr(arr);
+            return singleArr;
+        }
+        console.log(result)
+        // let newArr = [1, 2, [4, 5, [6, 7]], [3, 2], [9]];
+        // let result = singleSortedArr(newArr);
+
+        // function singleSortedArr(arr) {
+        //     const flattenedArr = arr.flat(Infinity);
+        //     const sortedArr = flattenedArr.sort((a, b) => a - b);
+        //     return sortedArr;
+        // }
+
+        // console.log(result);
+		// show how the loop is running one by one on each element
+    </script>
+</body>
+
+</html>
