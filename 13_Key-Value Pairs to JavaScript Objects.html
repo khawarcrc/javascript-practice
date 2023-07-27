@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key-Value Pairs to JavaScript Objects</title>
+</head>
+
+<body>
+    <h1>Key-Value Pairs to JavaScript Objects</h1>
+    <p>At their most basic, objects are just collections of key-value pairs. In other words, they are pieces of data
+        (values) mapped to unique identifiers called properties (keys). <br>
+        Bracket notation is required if your property has a space in it or if you want to use a variable to name the
+        property. In the above case, the property is enclosed in quotes to denote it as a string and will be added
+        exactly as shown. Without quotes, it will be evaluated as a variable and the name of the property will be
+        whatever value the variable is.
+    </p>
+    <script>
+        let foods = {
+            apples: 25,
+            oranges: 32,
+            plums: 28
+        };
+
+        // Only change code below this line
+        foods["bananas"] = 13;
+        foods["grapes"] = 35;
+        foods["strawberries"] = 27;
+        // Only change code above this line
+
+        console.log(foods);
+
+        const tekkenCharacter = {
+            player: 'Hwoarang',
+            fightingStyle: 'Tae Kwon Doe',
+            human: true
+
+        };
+        tekkenCharacter['hair color'] = 'dyed orange';
+
+        console.log(tekkenCharacter)
+    </script>
+</body>
+
+</html>
