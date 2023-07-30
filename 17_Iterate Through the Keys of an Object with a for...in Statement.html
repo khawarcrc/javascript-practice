@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterate Through the Keys of an Object with a for...in Statement</title>
+</head>
+
+<body>
+    <h1>Iterate Through the Keys of an Object with a for...in Statement</h1>
+    <p>Objects do not maintain an ordering to stored keys like arrays do; thus a key's position on an object, or the
+        relative order in which it appears, is irrelevant when referencing or accessing that key.</p>
+    <script>
+        const users = {
+            Alan: {
+                online: false
+            },
+            Jeff: {
+                online: true
+            },
+            Sarah: {
+                online: false
+            }
+        }
+
+        function countOnline(allUsers) {
+            // Only change code below this line
+            let result = 0;
+            for (let user in allUsers) {
+                if (allUsers[user].online === true) {
+                    result++;
+                }
+            }
+            return result;
+            // Only change code above this line
+        }
+
+        console.log(countOnline(users));
+        const person = {
+            name: "John",
+            age: 30,
+            occupation: "Engineer"
+        };
+
+        for (let key in person) {
+            console.log(key + ": " + person[key]);
+        }
+    </script>
+</body>
+
+</html>
