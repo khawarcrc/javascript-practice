@@ -10,18 +10,20 @@
 <body>
     <h1>Reverse a String</h1>
     <script>
+        
         function reverseString(str) {
             let reversedStr = "";
             for (let i = str.length - 1; i >= 0; i--) {
-                reversedStr += str[i];
+                // reversedStr += str[i];
+                reversedStr = reversedStr + str[i];
                 console.log(reversedStr)
 
             }
             return reversedStr;
 
         }
-
-
+        reverseString("hello");
+   
         function reverseString(str) {
             return str
                 .split("")
@@ -31,7 +33,7 @@
 
         console.log(reverseString("hello"));
 
-        reverseString("hello");
+
     </script>
 </body>
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorialize a Number</title>
+</head>
+
+<body>
+    <h1>Factorialize a Number</h1>
+    <script>
+        function factorialize(num) {
+            let product = 1;
+            for (let i = 2; i <= num; i++) {
+                // product *= i;
+                product = product * i;
+                console.log(product)
+            }
+            return product
+        }
+
+        factorialize(5);
+
+        // function factorialize(num) {
+        //     if (num <= 0) {
+        //         return 1;
+        //     }
+        //     return num * factorialize(num - 1);
+        // }
+
+        // factorialize(5);
+
+        // function factorialize(num, factorial = 1) {
+        //     if (num <= 0) {
+        //         return factorial;
+        //     } else {
+        //         return factorialize(num - 1, factorial * num);
+        //     }
+        // }
+
+        // factorialize(5);
+    </script>
+</body>
+
+</html>
