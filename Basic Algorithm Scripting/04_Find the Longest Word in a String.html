@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Longest Word in a String</title>
+</head>
+
+<body>
+    <h1>Find the Longest Word in a String</h1>
+    <script>
+        function findLongestWordLength(str) {
+            let longestLength = 0;
+            let currentLength = 0;
+
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === " ") {
+                    if (currentLength > longestLength) {
+                        longestLength = currentLength;
+                    }
+                    currentLength = 0;
+                } else {
+                    currentLength++;
+                }
+            }
+            if (currentLength > longestLength) {
+                longestLength = currentLength;
+            }
+
+            return longestLength;
+        }
+
+        findLongestWordLength("The quick brown fox jumped over the lazy dog");
+    </script>
+</body>
+
+</html>
