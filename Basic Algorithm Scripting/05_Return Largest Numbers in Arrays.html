@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Largest Numbers in Arrays</title>
+</head>
+
+<body>
+    <h1>Return Largest Numbers in Arrays</h1>
+    <script>
+        function findTargetValue(str, target) {
+            let tempStr = "";
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === " ") {
+                    if (tempStr === target) {
+                        console.log(true);
+                        return true; // Return true here to exit the function
+                    } else {
+                        tempStr = "";
+                    }
+                } else {
+                    tempStr += str[i];
+                }
+            }
+            console.log(false);
+            return false; // Return false here if the target wasn't found
+        }
+
+        findTargetValue("hello world", "world");
+
+    </script>
+</body>
+
+</html>
