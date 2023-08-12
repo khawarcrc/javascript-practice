@@ -22,7 +22,12 @@
                     }
                 } else {
                     tempStr += str[i];
+                    console.log(tempStr);
                 }
+            }
+            if(tempStr === target){
+                console.log(true);
+                return true; 
             }
             console.log(false);
             return false; // Return false here if the target wasn't found
