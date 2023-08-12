@@ -10,6 +10,8 @@
 <body>
     <h1>Find the Longest Word in a String</h1>
     <script>
+        //findLongestWordLength("The quick brown fox jumpedd over the lazy dog");
+
         function findLongestWordLength(str) {
             let longestLength = 0;
             let currentLength = 0;
@@ -17,11 +19,11 @@
             for (let i = 0; i < str.length; i++) {
                 if (str[i] === " ") {
                     if (currentLength > longestLength) {
-                        longestLength = currentLength;
+                        longestLength = currentLength; //6
                     }
                     currentLength = 0;
                 } else {
-                    currentLength++;
+                    currentLength++; 
                 }
             }
             if (currentLength > longestLength) {
@@ -30,6 +32,8 @@
 
             return longestLength;
         }
+            //hello world //world
+        
 
 
         // Solution 2
