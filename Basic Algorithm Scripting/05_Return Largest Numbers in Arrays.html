@@ -22,19 +22,37 @@
                     }
                 } else {
                     tempStr += str[i];
-                     
+
                     console.log(tempStr);
                 }
             }
-            if(tempStr === target){
+            if (tempStr === target) {
                 console.log(true);
-                return true; 
+                return true;
             }
             console.log(false);
             return false; // Return false here if the target wasn't found
         }
 
         findTargetValue("hello world", "world");
+
+        function largestOfFour(arr) {
+            const results = []; // A new array where the largest elements will be collected
+            for (let i = 0; i < arr.length; i++) {
+                let largestNumber = arr[i][0]; // Initially considering the first element as the largest
+                for (let j = 1; j < arr[i].length; j++) {
+                    if (arr[i][j] > largestNumber) {
+                        largestNumber = arr[i][j]; // If a larger element is found, replace the current largest element with the new one
+                    }
+                }
+                results[i] = largestNumber; // Store the largest element of each sub-array in the 'results' array
+            }
+
+            return console.log(results); // Print the new array on the console
+        }
+
+        largestOfFour([[4, 5, 1, 3,6], [13, 27, 18, 26,7], [32, 35, 37, 39,99], [1000, 1001, 857, 1,89]]);
+
 
     </script>
 </body>

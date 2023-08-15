@@ -10,36 +10,45 @@
 <body>
     <h1>Factorialize a Number</h1>
     <script>
-        // function factorialize(num) {
-        //     let product = 1;
-        //     for (let i = 2; i <= num; i++) {
-        //         // product *= i;
-        //         product = product * i;
-        //         console.log(product)
-        //     }
-        //     return product
-        // }
+        // First Function: Using a Loop to Calculate Factorial
+        function factorialize(num) {
+            let product = 1;  // Initialize a starting value
+            for (let i = 2; i <= num; i++) {
+                product = product * i;  // Multiply product by 'i' in each iteration
+                console.log(product);   // Print the product to the console after each iteration
+            }
+            return product;  // Return the calculated factorial
+        }
 
-        // factorialize(5);
+        console.log("Using a Loop:");
+        const factorialLoop = factorialize(5);
+        console.log(factorialLoop); // Output: 120
 
-        // function factorialize(num) { //3
-        //     if (num <= 0) {
-        //         return 1;
-        //     }
-        //     return num * factorialize(num - 1)//2;
-        // }
+        // Second Function: Calculating Factorial Using Recursion
+        function factorializeRecursion(num) {
+            if (num <= 0) {
+                return 1;  // If the number is 0 or negative, return 1
+            }
+            return num * factorializeRecursion(num - 1);  // Calculate factorial using recursion
+        }
 
-        // factorialize(5);
+        console.log("Using Recursion:");
+        const factorialRecursion = factorializeRecursion(5);
+        console.log(factorialRecursion); // Output: 120
 
-        // function factorialize(num, factorial = 1) {
-        //     if (num <= 0) {
-        //         return factorial;
-        //     } else {
-        //         return factorialize(num - 1, factorial * num);
-        //     }
-        // }
+        // Third Function: Calculating Factorial Using Recursion and an Extra Parameter
+        function factorializeRecursiveExtra(num, factorial = 1) {
+            if (num <= 0) {
+                return factorial;  // If the number is 0 or negative, return the calculated factorial
+            } else {
+                return factorializeRecursiveExtra(num - 1, factorial * num);  // Calculate factorial using recursion and an extra parameter
+            }
+        }
 
-        // factorialize(5);
+        console.log("Using Recursion and an Extra Parameter:");
+        const factorialRecursiveExtra = factorializeRecursiveExtra(5);
+        console.log(factorialRecursiveExtra);
+
     </script>
 </body>
 
