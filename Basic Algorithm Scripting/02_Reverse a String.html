@@ -10,28 +10,34 @@
 <body>
     <h1>Reverse a String</h1>
     <script>
-        
-        function reverseString(str) {
-            let reversedStr = "";
+
+        // Pehla Function: Loop Istemal Karke
+        function reverseStringLoop(str) {
+            let reversedStr = "";  // Ek khali string banai jati hai jo ulta hone wali string store karegi
             for (let i = str.length - 1; i >= 0; i--) {
-                // reversedStr += str[i];
-                reversedStr = reversedStr + str[i];
-                console.log(reversedStr)
-
+                reversedStr = reversedStr + str[i]; // Har iteration mein string ko ulta karke reversedStr mein jodte hain
+                console.log(reversedStr);  // Har iteration ke baad ulta hua string ko console mein print karte hain
             }
-            return reversedStr;
-
+            return reversedStr;  // Ulta hua string ko wapis bhejte hain
         }
-        reverseString("hello");
-   
+
+        console.log("Loop Istemal Karke:");
+        const loopReversed = reverseStringLoop("hello");
+        console.log(loopReversed); // Output: "olleh" (ulta hua string)
+
+        // Dusra Function: split, reverse, aur join Istemal Karke
         function reverseString(str) {
             return str
-                .split("")
-                .reverse()
-                .join("");
+                .split("")      // String ko tukdon mein tukde karte hain
+                .reverse()      // Tukde ko ulta kar dete hain
+                .join("");      // Ulta hua tukde ko string mein jod dete hain
         }
 
-        console.log(reverseString("hello"));
+        console.log("split, reverse, aur join Istemal Karke:");
+        const reversed = reverseString("hello");
+        console.log(reversed); // Output: "olleh" (ulta hua string)
+
+
 
 
     </script>
