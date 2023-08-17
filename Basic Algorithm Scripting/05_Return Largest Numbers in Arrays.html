@@ -56,20 +56,46 @@
         function largestOfFour(arr) {
             return arr.map(function (group) {
                 return group.reduce(function (prev, current) {
-                    return current > prev ? current : prev;
+                    return current > prev ? current : prev; // Compare and return the larger value
                 });
             });
         }
 
+        const result1 = largestOfFour([
+            [4, 5, 1, 3, 6],
+            [13, 27, 18, 26, 7],
+            [32, 35, 37, 39, 99],
+            [1000, 1001, 857, 1, 89]
+        ]);
+        console.log(result1); // Log the result of the first implementation
+
+        // Function to find the largest number in each sub-array using Function.apply and Math.max
         function largestOfFour(arr) {
-            return arr.map(Function.apply.bind(Math.max, null));
+            return arr.map(Function.apply.bind(Math.max, null)); // Call Math.max for each sub-array
         }
 
+        const result2 = largestOfFour([
+            [4, 5, 1, 3, 6],
+            [13, 27, 18, 26, 7],
+            [32, 35, 37, 39, 99],
+            [1000, 1001, 857, 1, 89]
+        ]);
+        console.log(result2); // Log the result of the second implementation
+
+        // Recursive function to find the largest number in each sub-array using spread operator
         function largestOfFour(arr, finalArr = []) {
             return !arr.length
                 ? finalArr
-                : largestOfFour(arr.slice(1), finalArr.concat(Math.max(...arr[0])))
+                : largestOfFour(arr.slice(1), finalArr.concat(Math.max(...arr[0])));
         }
+
+        const result3 = largestOfFour([
+            [4, 5, 1, 3, 6],
+            [13, 27, 18, 26, 7],
+            [32, 35, 37, 39, 99],
+            [1000, 1001, 857, 1, 89]
+        ]);
+        console.log(result3); // Log the result of the third implementation
     </script>
 </body>
 
