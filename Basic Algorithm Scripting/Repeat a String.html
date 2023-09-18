@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat a String Repeat a String</title>
+</head>
+
+<body>
+    <h1>Repeat a String Repeat a String</h1>
+    <ul>
+        <li>i is initially set to 0 (let i = 0).</li>
+        <li>The loop checks if i (0) is less than num (3). Since this condition is true, the loop begins.</li>
+        <li>In the loop body, accumulatedStr is concatenated with "abc". So, accumulatedStr becomes "abc".</li>
+        <li>i is incremented by 1 (i++), so now i is 1.</li>
+        <li>The loop checks the condition again. Since i (1) is still less than num (3), the loop continues.</li>
+        <li>"abc" is concatenated with accumulatedStr again, so accumulatedStr becomes "abcabc".</li>
+        <li>i is incremented again, and now it's 2.</li>
+        <li>The loop checks the condition, and it's still true, so it continues.</li>
+        <li>"abc" is concatenated with accumulatedStr once more, making accumulatedStr "abcabcabc".</li>
+        <li>i is incremented to 3.</li>
+        <li>The loop condition is checked again. This time, i (3) is not less than num (3), so the loop exits.</li>
+        <li>Finally, accumulatedStr contains the repeated string "abcabcabc", and this value is returned from the
+            function.</li>
+    </ul>
+
+    <script>
+        function repeatStringNumTimes(str, num) {
+            // Initialize an empty string to store the accumulated result.
+            let accumulatedStr = "";
+
+            // Start a loop that runs 'num' times.
+            for (let i = 0; i < num; i++) {
+                // In each iteration of the loop, concatenate the 'str' to 'accumulatedStr'.
+                accumulatedStr = accumulatedStr + str;
+            }
+
+            // After the loop finishes, return the accumulated result.
+            return accumulatedStr;
+        }
+
+        console.log(repeatStringNumTimes("abc", 3));
+    </script>
+</body>
+
+</html>
