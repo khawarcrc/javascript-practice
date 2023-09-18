@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm the Ending</title>
+</head>
+
+<body>
+    <h1>Confirm the Ending</h1>
+    <p>
+
+    </p>
+
+    <script>
+        function confirmEnding(str, target) {
+            // Use the "slice" method to extract a portion of the "str" string.
+            // We start from the end of "str" by using "str.length - target.length" as the starting index.
+            // This extracts a substring from the end of "str" that has the same length as the "target" string.
+            // Then, we compare this extracted substring to the "target" string using the "===" operator.
+            // If they are the same, the function returns "true," indicating that "str" ends with "target."
+            // Otherwise, it returns "false."
+            return str.slice(str.length - target.length) === target;
+        }
+        console.log(confirmEnding("Bastian", "n"));
+    </script>
+</body>
+
+</html>
