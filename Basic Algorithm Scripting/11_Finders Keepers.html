@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Finders Keepers</h1>
+    <script>
+        // This function takes an array 'arr' and a callback function 'func' as parameters.
+        // function findElement(arr, func) {
+        //     // Initialize a variable 'num' to store the current element being evaluated.
+        //     let num = 0;
+
+        //     // Loop through each element of the 'arr' using a 'for' loop.
+        //     for (let i = 0; i < arr.length; i++) {
+        //         // Set 'num' to the current element of the array.
+        //         num = arr[i];
+
+        //         // Check if the result of calling the 'func' callback function with 'num' as an argument is truthy.
+        //         if (func(num)) {
+        //             // If the callback function returns true for 'num', return 'num'.
+        //             return num;
+        //         }
+        //     }
+
+        //     // If no element in the array satisfies the condition in 'func', return 'undefined'.
+        //     return undefined;
+        // }
+
+        function findElement(arr, func) {
+            return arr.find(func);
+        }
+
+        // Call the 'findElement' function with an array [1, 2, 3, 4] and a callback function that checks if a number is even.
+        console.log(findElement([1, 2, 3, 4], num => num % 3 === 0));
+
+    </script>
+</body>
+
+</html>
