@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truncate a String</title>
+</head>
+
+<body>
+    <h1>Truncate a String</h1>
+    <p></p>
+    <script>
+        // function named truncateString that takes two parameters: str (a string) and num (a number).
+        function truncateString(str, num) {
+            // Check if the length of the input string (str) is greater than the specified number (num).
+            if (str.length > num) {
+                // If the length of str is greater than num, slice the string from the beginning (0) up to num characters
+                // and append "..." to indicate that the string has been truncated.
+                return str.slice(0, num) + "...";
+            } else {
+                // If the length of str is not greater than num, return the original string unchanged.
+                return str;
+            }
+
+        }
+
+        // function truncateString(str, num) {
+        //     return str.length > num ? str.slice(0, num) + "..." : str;
+        // }
+
+        // Call the truncateString function with the given input string and number.
+        console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
+
+    </script>
+</body>
+
+</html>
