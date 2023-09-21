@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Finders Keepers</h1>
+    <h1>Finders Keepers and boowoo </h1>
     <script>
         // This function takes an array 'arr' and a callback function 'func' as parameters.
         // function findElement(arr, func) {
@@ -35,8 +35,22 @@
             return arr.find(func);
         }
 
-        // Call the 'findElement' function with an array [1, 2, 3, 4] and a callback function that checks if a number is even.
+        // Call the 'findElement' function with an array [1, 2, 3, 4] and a
+        //  callback function that checks if a number is even.
         console.log(findElement([1, 2, 3, 4], num => num % 3 === 0));
+
+
+        // Define a function named "booWho" that takes one parameter, "bool"
+        function booWho(bool) {
+            // Check if the type of "bool" is strictly equal (===) to the string "boolean"
+            // The "typeof" operator returns a string representing the type of "bool"
+            // If the type of "bool" is "boolean", this condition will be true
+            return typeof bool === "boolean";
+        }
+
+        // Call the "booWho" function with the argument "null" and log the result to the console
+        console.log(booWho(null));
+
 
     </script>
 </body>
