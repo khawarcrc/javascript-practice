@@ -4,41 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reverse a String</title>
 </head>
 
 <body>
     <h1>Reverse a String</h1>
+    <h2>Explanation for first function</h2>
+    <ul>
+        <li>
+            This is a for loop that will iterate through the characters of the input string in reverse order.
+        </li>
+        <li>
+            `let i = str.length - 1;`: This initializes a loop control variable `i` to the index of the last character
+            in the
+            input string. `str.length` gives you the length of the string, and by subtracting 1, we start from the last
+            character (JavaScript arrays and strings are zero-indexed, so the last character is at `str.length - 1`).
+        </li>
+        <li>
+            `i >= 0;`: This is the condition that controls how long the loop runs. It continues to run as long as `i` is
+            greater
+            than or equal to 0.
+        </li>
+        <li>
+            `i--`: This is the decrement statement, which means that in each iteration, `i` is reduced by 1.
+        </li>
+    </ul>
+
     <script>
 
-        // Pehla Function: Loop Istemal Karke
+        // First Function: Using a Loop
         function reverseStringLoop(str) {
-            let reversedStr = "";  // Ek khali string banai jati hai jo ulta hone wali string store karegi
+            let reversedStr = "";  // Create an empty string to store the reversed string
             for (let i = str.length - 1; i >= 0; i--) {
-                reversedStr = reversedStr + str[i]; // Har iteration mein string ko ulta karke reversedStr mein jodte hain
-                console.log(reversedStr);  // Har iteration ke baad ulta hua string ko console mein print karte hain
+                reversedStr = reversedStr + str[i]; // Append each character in reverse order to the reversedStr
+                console.log(reversedStr);  // Print the reversed string in each iteration
             }
-            return reversedStr;  // Ulta hua string ko wapis bhejte hain
+            return reversedStr;  // Return the reversed string
         }
 
-        console.log("Loop Istemal Karke:");
-        const loopReversed = reverseStringLoop("hello");
-        console.log(loopReversed); // Output: "olleh" (ulta hua string)
 
-        // Dusra Function: split, reverse, aur join Istemal Karke
+
+        console.log("Using a Loop:");
+        const loopReversed = reverseStringLoop("hello");
+        console.log(loopReversed); // Output: "olleh" (the reversed string)
+
+        // Second Function: Using split, reverse, and join
         function reverseString(str) {
             return str
-                .split("")      // String ko tukdon mein tukde karte hain
-                .reverse()      // Tukde ko ulta kar dete hain
-                .join("");      // Ulta hua tukde ko string mein jod dete hain
+                .split("")      // Split the string into an array of characters
+                .reverse()      // Reverse the order of the array elements
+                .join("");      // Join the reversed array back into a string
         }
 
-        console.log("split, reverse, aur join Istemal Karke:");
+        console.log("Using split, reverse, and join:");
         const reversed = reverseString("hello");
-        console.log(reversed); // Output: "olleh" (ulta hua string)
-
-
-
+        console.log(reversed); // Output: "olleh" (the reversed string)
 
     </script>
 </body>
