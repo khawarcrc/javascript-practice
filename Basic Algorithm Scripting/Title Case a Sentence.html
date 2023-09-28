@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Case a Sentence</title>
+</head>
+
+<body>
+    <h1>Title Case a Sentence</h1>
+    <script>
+        //  function named titleCase that takes one argument 'str'.
+        function titleCase(str) {
+            // Split the input string 'str' into an array of words using space as the separator.
+            const newTitle = str.split(" ");
+
+            // Create an empty array 'updatedTitle' to store the title-cased words.
+            const updatedTitle = [];
+
+            // Iterate through each word in the 'newTitle' array.
+            for (let st in newTitle) {
+                // Convert the first character of the current word to uppercase
+                // and concatenate it with the lowercase version of the rest of the word.
+                updatedTitle[st] = newTitle[st][0].toUpperCase() + newTitle[st].slice(1).toLowerCase();
+            }
+
+            // Join the title-cased words in the 'updatedTitle' array back into a single string
+            // with spaces in between and return the result.
+            return updatedTitle.join(" ");
+        }
+
+        // Call the titleCase function with the input "I'm a little tea pot"
+        // and store the result in a variable 'result'.
+        const result = titleCase("I'm a little tea pot");
+
+        // Log the result to the console.
+        console.log(result);
+
+
+        titleCase("I'm a little tea pot");
+    </script>
+</body>
+
+</html>
