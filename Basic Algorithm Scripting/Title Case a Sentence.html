@@ -10,6 +10,9 @@
 <body>
     <h1>Title Case a Sentence</h1>
     <script>
+
+        titleCase("I'm a little tea pot");
+
         //  function named titleCase that takes one argument 'str'.
         function titleCase(str) {
             // Split the input string 'str' into an array of words using space as the separator.
@@ -37,8 +40,21 @@
         // Log the result to the console.
         console.log(result);
 
+        // function 2
+        function titleCase(str) {
+            return str
+                .toLowerCase()
+                .split(" ")
+                .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+                .join(" ");
+        }
 
-        titleCase("I'm a little tea pot");
+// function3 
+        function titleCase(str) {
+            return str
+                .toLowerCase()
+                .replace(/(^|\s)\S/g, L => L.toUpperCase());
+        }
     </script>
 </body>
 
