@@ -12,5 +12,7 @@ const journery = [
   { language: "java", languageFullName: "java full" },
 ];
 journery.forEach((item) => {
- console.log(item.languageFullName)
-})
+  console.log(item.languageFullName);
+});
+
+
