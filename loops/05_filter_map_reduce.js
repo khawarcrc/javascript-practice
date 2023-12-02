@@ -75,4 +75,9 @@ const scientificBooks = [
   const filteredbookbyyear = scientificBooks.filter((book) => {
     return book.year < 1950
   })
-  console.log(filteredbookbyyear)
+  const filterByYear = scientificBooks.filter((book) => {
+    return book.year > 1970
+  })
+  console.log("by field name === Computer",filteredbookbyfield)
+  console.log("by year < 1950",filteredbookbyyear)
+  console.log("by year > 1970",filterByYear)
