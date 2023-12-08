@@ -56,3 +56,35 @@ function frankenSplice3(arr1, arr2, n) {
 // Call the function with [1, 2, 3] as arr1, [4, 5, 6] as arr2, and 1 as n.
 const result3 = frankenSplice3([1, 2, 3], [4, 5, 6], 1);
 console.log(result3);
+
+const fruits = ["apple", "banana", "orange", "grape", "kiwi"];
+
+// Remove 2 elements starting from index 1
+fruits.splice(1, 2);
+
+console.log(fruits);
+Output: ["apple", "grape", "kiwi"];
+
+const fruitsNew = ["apple", "banana", "grape"];
+// Add  starting from index 2, removing 0 elements
+fruitsNew.splice(2, 0, "kiwi", "mango");
+
+console.log(fruitsNew);
+
+const fruitsThree = ["banana", "mango", "orange"];
+// Replace 1 element at index 1 with 
+fruitsThree.splice(1, 1, "grapes");
+console.log(fruitsThree);
+
+
+const teams = ["liverpool" , "man city", "barca", "madrid"];
+
+teams.splice(2,2)
+
+console.log(teams)
+
+teams.push("barca", "madrid", "ac milan" , "inter milan");
+console.log(teams)
+
+teams.pop()
+console.log(teams)
