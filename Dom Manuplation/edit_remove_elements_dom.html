@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body style="font-family: 'Poppins', sans-serif; font-weight: 400; background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(languageName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${languageName}`
+        document.querySelector('.language').appendChild(li)
+            
+    }
+    addLanguage("python");
+    addLanguage("java");
+
+    function addOptimizedLanguage(languageName) {
+        const li = document.createElement('li');
+        const addText = document.createTextNode(languageName)
+        li.appendChild(addText)
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptimizedLanguage('c++');
+    addOptimizedLanguage('c');
+
+//    Edit
+
+
+</script>
+
+</html>
