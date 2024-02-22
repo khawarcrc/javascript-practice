@@ -26,3 +26,30 @@ console.log("data + 20", applyingmap);
 
 // Output the final array after all mapping and filtering operations
 console.log(newNums);
+
+
+
+
+
+
+
+// Sample list of student objects
+const studentList = [
+  { name: "Alice", score: 85 },
+  { name: "Bob", score: 72 },
+  { name: "Charlie", score: 90 },
+  { name: "David", score: 78 },
+  { name: "Eve", score: 94 }
+];
+
+// Only change code below this line
+
+// Mapping the student list to create a new array containing only names and scores
+const studentScores = studentList.map(student => ({
+  name: student.name,
+  score: student.score
+}));
+
+// Only change code above this line
+
+console.log(JSON.stringify(studentScores));
