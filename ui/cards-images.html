@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1200px;
+            /* Optional: Adjust max-width as needed */
+        }
+
+        .card {
+            width: calc(25% - 20px);
+            /* Adjust width for large screens */
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card1 {
+            background-image: url('https://source.unsplash.com/random/400x300');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card2 {
+            background-image: url('https://source.unsplash.com/random/400x300');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card3 {
+            background-image: url('https://source.unsplash.com/random/400x300');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card4 {
+            background-image: url('https://source.unsplash.com/random/400x300');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            color: black;
+        }
+
+        @media only screen and (max-width: 992px) {
+            .card {
+                width: calc(33.33% - 20px);
+                /* Adjust width for tablets */
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px);
+                /* Adjust width for smaller devices */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card card1">
+            <div class="card-content">
+                <h3>Card Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <!-- Repeat the card div for additional cards -->
+        <div class="card card2">
+            <div class="card-content">
+                <h3>Card Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="card card3">
+            <div class="card-content">
+                <h3>Card Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="card card4">
+            <div class="card-content">
+                <h3>Card Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

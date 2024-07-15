@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .slider {
+            max-width: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            overflow: hidden;
+        }
+
+        .slide img{
+            width: 100%;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 20px;
+        }
+
+        button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="" alt="Slide 1">
+                <div class="content">
+                    <h3>Slide 1</h3>
+                    <p>This is the content for slide 1.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="" alt="Slide 2">
+                <div class="content">
+                    <h3>Slide 2</h3>
+                    <p>This is the content for slide 2.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="" alt="Slide 3">
+                <div class="content">
+                    <h3>Slide 3</h3>
+                    <p>This is the content for slide 3.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="prevBtn">Previous</button>
+    <button id="nextBtn">Next</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slidesContainer = document.querySelector(".slides");
+            const slides = document.querySelectorAll(".slide");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                const slideWidth = slides[0].clientWidth;
+                slidesContainer.style.transform = `translateX(-${slideWidth * index}px)`;
+                currentIndex = index;
+            }
+
+            function nextSlide() {
+                if (currentIndex < slides.length - 1) {
+                    currentIndex++;
+                    showSlide(currentIndex);
+                }
+            }
+
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    showSlide(currentIndex);
+                }
+            }
+
+            function loadImages() {
+                slides.forEach((slide, index) => {
+                    const slideImg = slide.querySelector('img');
+                    const unsplashURL = `https://source.unsplash.com/random/1800x600/?banner`;
+                    slideImg.src = `${unsplashURL}&${index + 1}`;
+                });
+            }
+
+            prevBtn.addEventListener("click", prevSlide);
+            nextBtn.addEventListener("click", nextSlide);
+
+            window.addEventListener("resize", loadImages);
+
+            loadImages();
+            showSlide(currentIndex);
+        });
+
+    </script>
+
+</body>
+
+</html>
