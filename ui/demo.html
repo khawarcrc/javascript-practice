@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 14px;
+            margin: 0;
+            padding: 0 15px;
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .flex-wrapper {
+            margin-top: 100px;
+        }
+
+        .card {
+            padding: 20px;
+            background-color: red;
+            color: white;
+            border-radius: 12px;
+            margin: 0 auto 20px auto;
+            max-width: 400px;
+
+            /* img {
+                border-radius: 12px;
+                width: 360px;
+                height: 180px;
+            } */
+        }
+
+        @media(min-width:768px) {
+            .container {
+                max-width: 720px;
+                margin: auto;
+            }
+
+            .flex-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+
+                gap: 15px;
+
+            }
+
+            .card {
+                max-width: 48%;
+                flex: 0 0 auto;
+                margin: 0;
+
+                img {
+                    width: 306px;
+                    height: 153px;
+                }
+            }
+
+        }
+
+        @media(min-width:992px) {
+            .container {
+                max-width: 960px;
+                margin: auto;
+            }
+
+            .card {
+                max-width: 32%;
+
+            }
+        }
+
+        @media(min-width:1200px) {
+            .container {
+                max-width: 1140px;
+                margin: auto;
+            }
+
+            .card {
+                img {
+                    width: 324px;
+                    height: 161px;
+                }
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-wrapper">
+            <div class="card">
+                <img src="/img-1.jpg" width="400" height="200" alt="card img">
+                <h3>hello.</h3>
+            </div>
+            <div class="card">
+                <img src="/img-2.png" width="400" height="200" alt="card img">
+
+                <h3>hi.</h3>
+            </div>
+            <div class="card">
+                <img src="/car.jpg" width="400" height="200" alt="card img">
+
+                <h3>hello how are u.</h3>
+            </div>
+            <div class="card">
+                <img src="/img-2.png" width="400" height="200" alt="card img">
+
+                <h3> Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+
+</html>

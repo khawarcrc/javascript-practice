@@ -10,3 +10,7 @@ function setFields(name, email, phoneNumber) {
 
 const newFields = new  setFields("coderbro", "coder@code", "007")
 console.log(newFields);
+
+
+
+// call jo ha wo curent execution context kese or function ko pass kr dta ha
